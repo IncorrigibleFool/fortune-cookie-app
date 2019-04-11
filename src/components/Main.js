@@ -50,6 +50,15 @@ export default class Main extends Component {
           })
       }).catch(err => console.log(err))
   }
+
+  //deletes a fortune with the correct id
+  deleteFortune = (fortune) => {
+      axios.delete(`/api/fortunes/${fortune.id}`).then(res => {
+          this.setState({
+              fortunes: res.data
+          })
+      }).catch(err => console.log(err))
+  }
   
   //switches screens between Master.js and Scroll.js
   changeScreen = () => {
@@ -59,7 +68,7 @@ export default class Main extends Component {
   }
   
   render() {
-    let {fortuneRepository, fortunes} = this.state
+    let {fortunes} = this.state
     
     return (
       !this.state.showScroll
@@ -72,7 +81,11 @@ export default class Main extends Component {
       </div>
       :
       <div>
-        <Scroll change={this.changeScreen}/>
+        <Scroll 
+            change={this.changeScreen}
+            fortunes={fortunes}
+            updateFortune={this.updateFortune}
+        />
       </div>
     )
   }
