@@ -9,7 +9,7 @@ export default class Scroll extends Component{
     render(){
         return(
             <div>
-                <div>I am a different screen, young grasshopper</div>
+                <h1>The Master's Scroll of Wisdom</h1>
                 <button onClick={this.props.change}>Switch</button>
             </div>
         )

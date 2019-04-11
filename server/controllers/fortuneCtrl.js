@@ -1,27 +1,5 @@
 let id = 1
-
-let fortunes = [
-    {
-        id: id++,
-        message:'"Temper is so good a thing that we should never lose it."'
-    },
-    {
-        id: id++,
-        message:`"If you lose your temper, don't look for it."`
-    },
-    {
-        id: id++,
-        message:'"Heavy givers are light complainers."'
-    },
-    {
-        id: id++,
-        message:'"Attack is the best form of defense"'
-    },
-    {
-        id: id++,
-        message:`"At a round table there's no dispute about the place."`
-    },
-]
+let fortunes = []
 
 module.exports = {
     get: (req, res) => res.send(fortunes),
