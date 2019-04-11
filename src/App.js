@@ -1,27 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios'
+import Master from './components/Master'
+import Scroll from './components/Scroll'
 
 class App extends Component {
+  constructor(){
+    super()
+
+    this.state = {
+      showScroll: false,
+      fortuneRepository: [],
+      fortunes: []
+    }
+  }
+
+  componentDidMount(){
+    axios.get('/api/fortunes').then(res => {
+      this.setState({
+        fortuneRepository: res.data
+      })
+    }).catch(err => console.log(`Error with status code: ${err}`))
+  }
+  
+  //switches screens between Master.js and Scroll.js
+  changeScreen = () => {
+    this.setState({
+      showScroll: !this.state.showScroll
+    })
+  }
+  
   render() {
     return (
+      !this.state.showScroll
+      ?
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Master change={this.changeScreen}/>
       </div>
-    );
+      :
+      <div className="App">
+        <Scroll change={this.changeScreen}/>
+      </div>
+    )
   }
 }
 
