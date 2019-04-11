@@ -18,7 +18,12 @@ export default class Scroll extends Component{
             <div>
                 <h1>The Master's Scroll of Wisdom</h1>
                 {fortunes.map(fortune => {
-                    return <Wisdom key={fortune.id} fortune={fortune} updateFortune={this.props.updateFortune}/>
+                    return <Wisdom 
+                        key={fortune.id} 
+                        fortune={fortune} 
+                        updateFortune={this.props.updateFortune}
+                        deleteFortune={this.props.deleteFortune}
+                    />
                     }
                 )}
                 <button onClick={this.props.change}>Teach me more, Master</button>

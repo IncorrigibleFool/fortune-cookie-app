@@ -16,10 +16,15 @@ export default class EditWisdom extends Component{
         })
     }
 
-    handleClick = () => {
+    handleEdit = () => {
         let fortune = {...this.props.fortune, ...this.state}
         this.props.updateFortune(fortune)
         this.props.toggleEdit()
+    }
+
+    handleDelete = () => {
+        let fortune = {...this.props.fortune, ...this.state}
+        this.props.deleteFortune(fortune)
     }
 
     render(){
@@ -31,7 +36,8 @@ export default class EditWisdom extends Component{
                     type='text'
                     onChange={this.handleChange}
                 />
-                <button onClick={this.handleClick}>Change</button>
+                <button onClick={this.handleEdit}>Change</button>
+                <button onClick={this.handleDelete}>Delete</button>
             </div>
         )
     }

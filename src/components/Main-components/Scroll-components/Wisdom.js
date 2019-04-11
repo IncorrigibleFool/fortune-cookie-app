@@ -24,6 +24,7 @@ export default class Wisdom extends Component{
             <EditWisdom
                 fortune = {this.props.fortune}
                 updateFortune = {this.props.updateFortune}
+                deleteFortune = {this.props.deleteFortune}
                 toggleEdit = {this.toggleEdit}
             />
             :

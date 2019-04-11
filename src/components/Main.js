@@ -85,6 +85,7 @@ export default class Main extends Component {
             change={this.changeScreen}
             fortunes={fortunes}
             updateFortune={this.updateFortune}
+            deleteFortune={this.deleteFortune}
         />
       </div>
     )
