@@ -11,8 +11,10 @@ export default class Master extends Component{
         }
     }
 
+    
     showFortune = () => {
         let fortune = this.props.createRandomFortune()
+        //createRandomFortune is from from Main.js
         this.setState({
             currentFortune: fortune
         })
@@ -22,10 +24,9 @@ export default class Master extends Component{
         return(
             <div>
                 <h1>The Wise Master Shares His Wisdom...</h1>
-                <div>Hello there young grasshopper</div>
-                <button onClick={this.props.change}>Switch</button>
                 <ShowNewFortune currentFortune={this.state.currentFortune}/>
-                <button onClick={this.showFortune}>New Fortune</button>
+                <button onClick={this.showFortune}>Teach me, Master</button>
+                <button onClick={this.props.change}>Show me your teachings, Master</button>
             </div>
         )
     }

@@ -11,7 +11,6 @@ export default class Main extends Component {
       showScroll: false,
       fortuneRepository: [],
       fortunes: [],
-      id: 1
     }
   }
 
@@ -29,23 +28,27 @@ export default class Main extends Component {
     }).catch(err => console.log(err))
   }
 
+  //posts random new fortune from external api to local server
   createRandomFortune = () => {
-    let {id} = this.state
     let randomFortune = this.state.fortuneRepository[Math.floor(Math.random() * this.state.fortuneRepository.length)]
-    randomFortune.id = id
-    this.setState({
-        id: id + 1
-    })
-    
-    this.setState({
-      fortunes: [...this.state.fortunes, randomFortune]
-    })
 
-    //axios.post('/api/fortunes', randomFortune).then(res => {
-    //    
-    //}).catch(err => console.log(err))
+    axios.post('/api/fortunes', randomFortune)
+        .then(res => {
+            this.setState({
+                fortunes: [...this.state.fortunes, res.data]
+            })
+        }).catch(err => console.log(err))
 
     return randomFortune.message
+  }
+
+  //updates a fortune with the correct id
+  updateFortune = (fortune) => {
+      axios.patch(`/api/fortunes/${fortune.id}`, fortune).then(res => {
+          this.setState({
+              fortunes: res.data
+          })
+      }).catch(err => console.log(err))
   }
   
   //switches screens between Master.js and Scroll.js
