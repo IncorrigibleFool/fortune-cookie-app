@@ -29,7 +29,7 @@ export default class Wisdom extends Component{
             />
             :
             <div>
-                {message}
+                <span>{message}</span>
                 <button onClick={this.toggleEdit}>edit</button>
             </div>
             )

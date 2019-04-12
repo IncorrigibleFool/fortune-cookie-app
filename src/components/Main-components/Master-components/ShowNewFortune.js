@@ -1,11 +1,16 @@
 import React from 'react'
+import './ShowNewFortune.css'
 
 export default function ShowNewFortune({currentFortune}){
     return(
         currentFortune === ''
         ?
-        <p>Confucius say, "Young Grasshoppers who ask to learn from the Master shall receive wisdom."</p>
+        <div className='bubble'>
+            <p>What is your desire, young grasshopper?</p>
+        </div>
         :
-        <p>{currentFortune}</p>
+        <div className='bubble'>
+            <p>{currentFortune}</p>
+        </div>
     )
 }

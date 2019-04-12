@@ -9,7 +9,7 @@ export default class Scroll extends Component{
         super()
 
         this.state ={
-           edit : false
+           edit : false,
         }
     }
 
@@ -18,7 +18,9 @@ export default class Scroll extends Component{
 
         return(
             <div className='background'>
-                <h1>The Master's Scroll of Wisdom</h1>
+                <header>
+                    <h1>The Master's Scroll of Wisdom</h1>
+                </header>
                 <div className='scroll'>
                     <div className='content'>   
                         {fortunes.map(fortune => {
@@ -32,12 +34,14 @@ export default class Scroll extends Component{
                         )}
                     </div>
                 </div>
-                    <button onClick={this.props.change}>Teach me more, Master</button>
+                    <button className='button' onClick={this.props.change}>Return to the Master</button>
             </div>
-            //<div>
-            //    <p>I have not yet taught you, young grasshopper. Return to the foot of the master and listen.</p>
-            //    <button onClick={this.props.change}>Yes, Master</button>
-            //</div>
         )
+        //return(
+        //<div>
+        //    <p>I have not yet taught you, young grasshopper. Return to the foot of the master and listen.</p>
+        //    <button onClick={this.props.change}>Yes, Master</button>
+        //</div>
+        //)
     }
 }
