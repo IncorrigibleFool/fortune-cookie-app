@@ -27,7 +27,9 @@ export default class Master extends Component{
         return(
             <div className='Master'>
                 <Cherryblossom/>
-                <h1>The Wise Master Shares His Wisdom...</h1>
+                <header>
+                    <h1>The Wise Master Shares His Wisdom...</h1>
+                </header>
                 <ShowNewFortune currentFortune={this.state.currentFortune}/>
                 <img src='https://github.com/IncorrigibleFool/fortune-cookie-app/blob/master/laozi-tao-te-ching.png?raw=true' alt=''/>
                 <button onClick={this.showFortune}>Teach me, Master</button>

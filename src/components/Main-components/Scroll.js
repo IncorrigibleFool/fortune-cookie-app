@@ -8,27 +8,31 @@ export default class Scroll extends Component{
     constructor(){
         super()
 
-        //this.state ={
-        //    edit : true
-        //}
+        this.state ={
+           edit : false
+        }
     }
 
     render(){
         let {fortunes} = this.props
 
         return(
-            <div className='Scroll'>
+            <div className='background'>
                 <h1>The Master's Scroll of Wisdom</h1>
-                {fortunes.map(fortune => {
-                    return <Wisdom 
-                        key={fortune.id} 
-                        fortune={fortune} 
-                        updateFortune={this.props.updateFortune}
-                        deleteFortune={this.props.deleteFortune}
-                    />
-                    }
-                )}
-                <button onClick={this.props.change}>Teach me more, Master</button>
+                <div className='scroll'>
+                    <div className='content'>   
+                        {fortunes.map(fortune => {
+                            return <Wisdom 
+                                key={fortune.id} 
+                                fortune={fortune} 
+                                updateFortune={this.props.updateFortune}
+                                deleteFortune={this.props.deleteFortune}
+                                />
+                            }
+                        )}
+                    </div>
+                </div>
+                    <button onClick={this.props.change}>Teach me more, Master</button>
             </div>
             //<div>
             //    <p>I have not yet taught you, young grasshopper. Return to the foot of the master and listen.</p>

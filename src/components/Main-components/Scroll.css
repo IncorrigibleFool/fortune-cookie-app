@@ -1,7 +1,30 @@
-.Scroll{
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Wang_Xianzi_Imitation_by_Tang_Dynasty.JPG/1200px-Wang_Xianzi_Imitation_by_Tang_Dynasty.JPG');
+.background{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .scroll{
+    background-image: url('https://raw.githubusercontent.com/IncorrigibleFool/fortune-cookie-app/master/scroll%20clip%20art.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content{
+    background-size: contain;
+    width: 325px;
+    height: 57vh;
+    overflow-y: scroll;
   }
