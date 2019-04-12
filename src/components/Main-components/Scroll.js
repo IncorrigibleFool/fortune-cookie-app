@@ -1,4 +1,6 @@
 import React, {Component} from 'react'
+import './Scroll.css'
+
 import Wisdom from './Scroll-components/Wisdom'
 
 //secondary main page, shows a scroll with fortunes given
@@ -15,7 +17,7 @@ export default class Scroll extends Component{
         let {fortunes} = this.props
 
         return(
-            <div>
+            <div className='Scroll'>
                 <h1>The Master's Scroll of Wisdom</h1>
                 {fortunes.map(fortune => {
                     return <Wisdom 

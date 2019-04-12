@@ -81,7 +81,7 @@ export default class Main extends Component {
       </div>
       :
       <div>
-        <Scroll 
+        <Scroll
             change={this.changeScreen}
             fortunes={fortunes}
             updateFortune={this.updateFortune}
