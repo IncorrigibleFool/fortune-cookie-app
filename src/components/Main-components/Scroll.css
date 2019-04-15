@@ -42,5 +42,18 @@
   .button{
     cursor: pointer;
     padding:10px;
+  }
 
+  #search-bar{
+    width:20vw;
+  }
+
+  #search-button{
+    width: 10vw;
+  }
+
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }

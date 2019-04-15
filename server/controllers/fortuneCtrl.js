@@ -2,7 +2,18 @@ let id = 1
 let fortunes = []
 
 module.exports = {
-    get: (req, res) => res.send(fortunes),
+    get: (req, res, next) => {
+        var result = fortunes
+        if(req.query.search){
+        result = fortunes.filter(fortune => {
+            let message = fortune.message.toLowerCase()
+            let term = req.query.search.toLowerCase()
+            return message.includes(term)
+            })
+        return res.send(result)
+        }
+        res.send(fortunes)
+    },
 
     create: (req, res) => {
         let newFortune = req.body

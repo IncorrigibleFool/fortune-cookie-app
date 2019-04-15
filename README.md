@@ -1,4 +1,15 @@
+## Full CRUD Fortune Cookie App v1.0
+
+A simple react app where you can consult a wise Chinese master who will dispense fortune cookie wisdom.
+
+API for the fortune cookie fortune text comes from http://fortunecookieapi.herokuapp.com
+
+Cherry blossom effect taken from https://github.com/shuhei-tagawa/react-cherryblossom
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Type npm start into your console while in the root directory to use.
+Remember to also start the server so the master is not at a loss for words! Nodemon recommended.
 
 ## Available Scripts
 
