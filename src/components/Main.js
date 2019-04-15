@@ -74,15 +74,15 @@ export default class Main extends Component {
     return (
       !this.state.showScroll
       ?
-      <div>
+      <body>
         <Audio/>
         <Master 
           change={this.changeScreen}
           createRandomFortune={this.createRandomFortune}
         />
-      </div>
+      </body>
       :
-      <div>
+      <body>
         <Audio/>
         <Scroll
             change={this.changeScreen}
@@ -90,7 +90,7 @@ export default class Main extends Component {
             updateFortune={this.updateFortune}
             deleteFortune={this.deleteFortune}
         />
-      </div>
+      </body>
     )
   }
 }

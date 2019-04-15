@@ -100,6 +100,7 @@ export default class Scroll extends Component{
                 </div>
             )
         }else if(this.state.search === true && this.state.searchTerm !== ''){
+            //render state if searching with an input
             return(
                 <div className='background'>
                     <header>
