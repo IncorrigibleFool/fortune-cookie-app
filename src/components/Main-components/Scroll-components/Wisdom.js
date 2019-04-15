@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
+import './Wisdom.css'
 import EditWisdom from './EditWisdom'
+
 
 export default class Wisdom extends Component{
     constructor(){
@@ -28,9 +30,9 @@ export default class Wisdom extends Component{
                 toggleEdit = {this.toggleEdit}
             />
             :
-            <div>
-                <span>{message}</span>
-                <button onClick={this.toggleEdit}>edit</button>
+            <div id='message-box'>
+                <span id='message'>{message}</span>
+                <button id='button' onClick={this.toggleEdit}>edit</button>
             </div>
             )
     }

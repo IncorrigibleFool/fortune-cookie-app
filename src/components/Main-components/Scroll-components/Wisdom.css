@@ -1,0 +1,14 @@
+#message-box{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+#message{
+    margin-top: 10px;
+    margin-right: auto;
+}
+
+#button{
+    width: 60px;
+}

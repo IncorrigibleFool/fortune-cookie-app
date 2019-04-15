@@ -8,12 +8,12 @@
     font-size: 1.5em;
     position: relative;
     position: absolute;
-    left: 24vw;
+    left: 20vw;
     top: 12vh;
 	background: white;
     border-radius: 50%;
-    height: 30vh;
-    width: 30vw;
+    height: 33vh;
+    width: 33vw;
     margin-right: 50vw;
     display:flex;
     flex-flow: column wrap;
@@ -27,7 +27,7 @@
 	top: 50%;
 	width: 0;
 	height: 0;
-	border: 30px solid transparent;
+	border: 35px solid transparent;
 	border-left-color: white;
 	border-right: 0;
 	border-bottom: 0;
