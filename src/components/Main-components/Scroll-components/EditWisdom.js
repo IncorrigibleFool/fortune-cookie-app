@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import './EditWisdom.css'
 
 export default class EditWisdom extends Component{
     constructor(props){
@@ -30,14 +31,16 @@ export default class EditWisdom extends Component{
     render(){
         return(
             <div>
-                <input 
-                    value={this.state.message} 
-                    name='message' 
+                <input id='input-bar'
+                    value={this.state.message}
+                    name='message'
                     type='text'
                     onChange={this.handleChange}
                 />
-                <button onClick={this.handleEdit}>Change</button>
-                <button onClick={this.handleDelete}>Delete</button>
+                <div id='edit-buttons'>
+                    <button onClick={this.handleEdit}>Change</button>
+                    <button onClick={this.handleDelete}>Delete</button>
+                </div>
             </div>
         )
     }

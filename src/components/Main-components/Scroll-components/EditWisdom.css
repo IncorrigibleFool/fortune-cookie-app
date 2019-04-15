@@ -1,0 +1,10 @@
+#input-bar{
+    width: 22vw;
+    min-width: 280px;
+}
+
+#edit-buttons{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top: 10px;
+}

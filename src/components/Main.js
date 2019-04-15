@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import Master from './Main-components/Master'
 import Scroll from './Main-components/Scroll'
+import Audio from './Main-components/Audio'
 
 export default class Main extends Component {
   constructor(){
@@ -74,6 +75,7 @@ export default class Main extends Component {
       !this.state.showScroll
       ?
       <div>
+        <Audio/>
         <Master 
           change={this.changeScreen}
           createRandomFortune={this.createRandomFortune}
@@ -81,6 +83,7 @@ export default class Main extends Component {
       </div>
       :
       <div>
+        <Audio/>
         <Scroll
             change={this.changeScreen}
             fortunes={fortunes}

@@ -44,7 +44,7 @@ export default class Scroll extends Component{
             this.setState({
                 searchArray: res.data
             })
-        })
+        }).catch(err => console.log(err))
     }
 
     render(){

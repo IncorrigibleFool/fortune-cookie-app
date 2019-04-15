@@ -45,11 +45,13 @@
   }
 
   #search-bar{
-    width:20vw;
+    width: 30vw;
+    min-width: 280px;
   }
 
   #search-button{
     width: 10vw;
+    min-width: 100px;
   }
 
   footer{

@@ -1,4 +1,4 @@
-## Full CRUD Fortune Cookie App v1.0
+## Full CRUD Fortune Cookie App v1.1
 
 A simple react app where you can consult a wise Chinese master who will dispense fortune cookie wisdom.
 
